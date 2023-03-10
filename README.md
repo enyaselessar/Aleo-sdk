@@ -3,7 +3,7 @@
 Aleo wallet oluşturuyoruz.
 https://aleo.tools adresine giderek giderek “Generate” butonuna basın.
 
-Oluşturmuş olduğunuz cüzdan bilgilerini (Private key, Viewkey ve adrses kaydedin.
+Oluşturmuş olduğunuz cüzdan bilgilerini (Private key, Viewkey ve adres kaydedin.
 
 2. Token almak için Tweet atıyoruz
 
