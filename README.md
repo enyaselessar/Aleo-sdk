@@ -1,15 +1,15 @@
 # Aleo-sdk
 
-Aleo wallet oluşturuyoruz.
+1. Aleo wallet oluşturuyoruz.
 https://aleo.tools adresine giderek giderek “Generate” butonuna basın.
 
 Oluşturmuş olduğunuz cüzdan bilgilerini (Private key, Viewkey ve adres kaydedin.
 
 2. Token almak için Tweet atıyoruz
 
-@AleoFaucet send 10 credits to $YOUR_WALLET_ADDRESS
+@AleoFaucet send 10 credits to aleo cüzdan adresiniz
 
-$YOUR_WALLET_ADDRESS yazan kısmına kendi aleo1… aderesinizi yazıyoruz.Tweet için dönüş rastgele yapıyorlar.Biraz denemek gerekiyor.Ben 3.tweetimde dönüş aldım.
+Aleo cüzdan adresiniz yazan kısmına kendi aleo1… aderesinizi yazıyoruz.Tweet için dönüş rastgele yapıyorlar.Biraz denemek gerekiyor.Ben 3.tweetimde dönüş aldım.
 Tweete dönüş olursa size keylerin olduğu bir link gönderiyor @AleoFaucet
 
 3. Kurmuş olduğumuz VPS bağlanarak
@@ -62,17 +62,20 @@ cd $PATHTOAPP && cd ..
 PRIVATEKEY="Daha önce kaydettiğiniz private key yazın"
 
 
-⚠️ faucet den gelen linke giderek record (Ciphertext) kaydedin. 
-Bundan sonra https://aleo.tools/ linke giderek record kısmında View Key ve
-Record (Ciphertext) yerlerine yazınız. Altta size verdiği Record (Plaintext)
-kaydederek aşşağıda RECORD="" ("") arasına yazarak konsola yapıştırın.
+⚠️ faucet den gelen linke giderek aşağıdaki screenshotda görünen yerdeki record (Ciphertext) kısmını kopyalayıp,
+https://aleo.tools/ linke giderek record kısmına tıklayıp 1.adımda oluşturup kaydettiğiniz View Key ve size gelen linkten kopyaladığınız
+Record (Ciphertext) yerlerine yazınız. Yazdıktan sonra altta size Record (Plaintext) olarak bir kod verecek.O kodun tamamını kopyalayıp
+aşşağıda RECORD="" arasına yazarak konsola yapıştırın.
+
+RECORD="En son alınan kod"
+
 ![1](https://user-images.githubusercontent.com/108255403/224249316-98c6c502-11ee-4882-878d-4638921c92d1.png)
 
-RECORD=""
+
 
 snarkos developer deploy "${APPNAME}.aleo" --private-key "${PRIVATEKEY}" --query "https://vm.aleo.org/api" --path "./${APPNAME}/build/" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast" --fee 600000 --record "${RECORD}"
 
-5. İşlemler bittikten sonra
+5. Son olarak
 
 işlemler bittikten sonra konsolda ✅ Successfully deployed ‘helloworld_ görmeniz lazım
 
